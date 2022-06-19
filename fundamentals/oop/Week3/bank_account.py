@@ -27,6 +27,7 @@ class BankAccount:
         # your code here
         print(f"**********")
         print(f"Balance: {self.balance}")
+        print(f"**************")
         return self
         
     def yield_interest(self):
@@ -41,10 +42,10 @@ class BankAccount:
             accs.display_account_info()
 
     
-acc1 = BankAccount(0.5, 1000)
-acc2 = BankAccount(0.75, 100)
+# acc1 = BankAccount(0.5, 1000)
+# acc2 = BankAccount(0.75, 100)
 
-acc1.deposit(100).deposit(100).deposit(100).withdraw(50).yield_interest().display_account_info()
-acc2.deposit(10).deposit(10).deposit(10).withdraw(5).yield_interest().display_account_info()
+# acc1.deposit(100).deposit(100).deposit(100).withdraw(50).yield_interest().display_account_info()
+# acc2.deposit(10).deposit(10).deposit(10).withdraw(5).yield_interest().display_account_info()
 
-BankAccount.print_all_accounts()
+# BankAccount.print_all_accounts()
