@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: blueviolet;
+}
+#wrapper, #battle{
+    margin: 5% 25%;
+    width: 48%;
+    padding: 35px;
+    text-align: center;
+    background-color: goldenrod;
+}
+#wrapper form{
+    margin: 0 30%;
+    text-align: right;
+}
+#wrapper form #submit{
+    text-align: center;
+    width: 250px;
+}
+#battle{
+    background-color: aquamarine;
+}
+h1{
+    margin-bottom: 30px;
+}
+label{
+    margin: 10px;
+}

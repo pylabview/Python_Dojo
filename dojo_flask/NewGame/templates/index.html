@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Create a fighter, then battle!</h1>
+        <form action="/create" method="post">
+            <h1>Normal Fighter</h1>
+            <label for="name">Hero Name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="power">Power Level</label>
+            <input type="number" name="power" id="power"> <br><br>
+            <label for="luck">Luck:</label>
+            <input type="hidden" name="type" value="normal">
+            <input type="number" name="luck" id="luck" value="1">
+            <input id="submit" type="submit" value="Create your Fighter"><br><br>
+        </form>
+        <form action="/create" method="post">
+            <h1>Extreme Fighter</h1>
+            <label for="name">Hero Name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="power">Power Level</label>
+            <input type="number" name="power" id="power"> <br><br>
+            <label for="luck">Luck:</label>
+            <input type="number" name="luck" id="luck" value="1">
+            <input type="hidden" name="type" value="extreme">
+            <input id="submit" type="submit" value="Create your Fighter"><br><br>
+        </form>
+    </div>
+    <div id="battle">
+        <form action="/fight" method="post">
+            <h1>Time for Battle!</h1>
+            <label for="player1">Player 1:</label>
+            <select name="player1" id="player1">
+                {% for fighter in session['fighters'] %}
+                    <option value="{{fighter.power}}">{{fighter.name}}</option>
+                {% endfor %}
+            </select> 
+            <span>vs.</span>
+            <label for="player2">Player 2:</label>
+            <select name="player2" id="player2">
+                {% for fighter in session['fighters'] %}
+                    <option value="{{fighter.power}}">{{fighter.name}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Fight">
+        </form>
+        <h1>Victory Corner</h1>
+        <ul>
+            {% for winner in session.winners %}
+            <li>{{winner}}</li>
+            {% endfor%}
+        </ul>
+    </div>
+</body>
+</html>
