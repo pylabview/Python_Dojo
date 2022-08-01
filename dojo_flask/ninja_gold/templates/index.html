@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Ninja_Gold</title>
+</head>
+<body>
+    <!-- <div class="wrapper"> -->
+        <!-- <h1>Create a fighter, then battle!</h1> -->
+        <form action="/process_money" method="post">
+            <h1>Farm</h1>
+            <p>(earn 10-20 golds)</p><br>
+            <input type="hidden" name="building" value="farm">
+            <input id="submit" type="submit" value="Find Gold!"><br><br>
+        </form>
+        <form action="/process_money" method="post">
+            <h1>Cave</h1>
+            <p>(earn 5-10 golds)</p><br>
+            <input type="hidden" name="building" value="cave">
+            <input id="submit" type="submit" value="Find Gold!"><br><br>
+        </form>
+        <form action="/process_money" method="post">
+            <h1>House</h1>
+            <p>(earn 2-5 golds)</p><br>
+            <input type="hidden" name="building" value="house">
+            <input id="submit" type="submit" value="Find Gold!"><br><br>
+        </form>
+        <form action="/process_money" method="post">
+            <h1>Casino</h1>
+            <p>(earn 0-50 golds)</p><br>
+            <input type="hidden" name="building" value="casino">
+            <input id="submit" type="submit" value="Find Gold!"><br><br>
+        </form>
+    <!-- </div> -->
+</body>
+</html>
